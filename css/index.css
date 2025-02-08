@@ -1,0 +1,494 @@
+body{
+    font: 15px/1.5 Arial, Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+    background-color:#f4f4f4;
+  }
+  
+  
+  
+  
+  
+  header {
+     
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom:#e8491d 3px solid;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo img {
+    height: auto;
+    width: 160px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover{
+  font-weight: bolder;
+  }
+  
+  .hamburger-menu {
+    cursor: pointer;
+    display: none; /* Hide by default */
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .hamburger-menu span {
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .overlay ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .overlay ul li {
+    margin: 20px 0;
+  }
+  
+  .overlay ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .overlay ul li a:hover{
+  text-decoration: underline;
+  font-weight: bolder;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide on mobile */
+    }
+    .hamburger-menu {
+        display: flex; /* Show on mobile */
+    }
+  
+    .text{
+      padding: 15px;
+    }
+  
+    #sv-bg{
+      display: none;
+    }
+  
+    .image h2{
+    padding: 15px;
+    }
+  
+    #fts{
+      text-align: center;
+    }
+  
+    .rt p{
+     display: none;
+    }
+  
+    
+  }
+  
+  
+  /* Navigation */
+  nav ul {
+   display: flex;
+   list-style: none;
+  }
+  
+  nav ul li {
+   margin: 0 15px;
+  }
+  
+  nav ul li a {
+   color: #fff;
+   text-decoration: none;
+   padding: 5px;
+  }
+  
+  nav ul li a:hover {
+   border-bottom: 2px solid #fff;
+  }
+  
+  /* Hamburger Menu */
+  
+  
+  .bar {
+   width: 25px;
+   height: 3px;
+   background-color: white;
+   margin: 5px 0;
+  }
+  
+  
+  
+  
+  #showcase {
+   position: relative;
+   min-height: 100px;
+   background: url('https://shedrackolisa.github.io/bmd-media/img/special.webp') no-repeat center center/cover;
+   text-align: center;
+   color: #ffffff;
+   height: 100vh;
+   background-position: 50% 50%;
+  }
+  
+  
+  
+  #showcase::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5); /* Adjust this value to control the darkness */
+   z-index: 1; /* Ensure the overlay is on top */
+  }
+  
+  #showcase * {
+   position: relative;
+   z-index: 2; /* Ensure that content within #showcase is above the overlay */
+  }
+  
+  
+  
+  
+  
+  /* Global */
+  .container{
+    width:98%;
+    margin:auto;
+    overflow:hidden;
+  }
+  
+  ul{
+    margin:0;
+    padding:0;
+  }
+  
+  .button_1{
+    height:38px;
+    background:#e8491d;
+    border:0;
+    padding-left: 15px;
+    padding-right:15px;
+    color:#ffffff;
+    border-radius:5px;
+    width: 70%;
+    top:300px;
+  }
+  
+  
+  
+  .dark{
+    padding:15px;
+    background:#35424a;
+    color:#ffffff;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  
+  
+  .footer {
+    background-color: #35424a;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-top:#e8491d 3px solid;
+        }
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        .footer-links a {
+            color: #ddd;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer-links a:hover {
+            color: #fff;
+            font-weight: bolder;
+        }
+        .social-icons {
+            margin-bottom: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #ddd;
+        }
+        .copyright {
+            margin-bottom: 20px;
+            font-size: 14px;
+            border-top: 1px solid #fff;
+            font-weight: bold;
+        }
+        .back-to-top img {
+            width: 180px; /* Adjust size as needed */
+            height: auto;
+        }
+        .back-to-top {
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+  
+  
+  .name-bg{
+      top:300px;
+  }
+  
+  
+  
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .hard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .image-grid {
+    column-count: 4; /* 4 columns for desktop */
+    column-gap: 1px; /* Space between columns */
+    width: 93%;
+  margin:auto;
+  overflow: hidden;
+  }
+  
+  @media (min-width: 1200px) {
+    .image-grid {
+    column-count: 4; /* 4 columns for desktop */
+    column-gap: 1px; /* Space between columns */
+    width: 80%;
+  margin:auto;
+  overflow: hidden;
+  }
+  }
+  
+  .image-grid img {
+    width: 100%;
+    margin-bottom: 1px; /* Space between images vertically */
+    break-inside: avoid; /* Prevent breaking images across columns */
+  }
+  
+  @media (max-width: 768px) {
+    .image-grid {
+        column-count: 1; /* 1 column for mobile */
+    }
+  }
+  
+  
+  
+  
+  .image {
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 3s ease, transform 1s ease;
+    /* transition: opacity 0.6s ease, transform 0.6s ease; */
+  }
+  
+  .image-loaded {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* General background container styling */
+  .background-container {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* Desktop Slideshow Background Style */
+  @media only screen and (min-width: 769px) {
+    .background-container {
+        background-image: url('https://shedrackolisa.github.io/bmd-media/img/special.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 3s ease-in-out;
+    }
+  }
+  
+  /* Mobile Static Background Styles */
+  @media only screen and (max-width: 768px) {
+    .background-container {
+        display: flex;
+        flex-direction: column;
+    }
+  
+    /* Each section on mobile with specified height and background */
+    .background-section {
+        width: 100%;
+        height: 33.33vh;
+        background-size: cover;
+        background-position: center;
+    }
+  
+    /* Background images for mobile sections */
+    .background-section.section1 {
+        background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp');
+    }
+  
+    .background-section.section2 {
+        background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp');
+    }
+  
+    .background-section.section3 {
+        background-image: url('https://shedrackolisa.github.io/bmd-media/img/special.webp');
+    }
+  }
+  
+  
+  
+  .bmd img{
+    float: left;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .mm{
+      display: none;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  @media only screen and (max-width: 768px) {
+    .hide-rate-card-on-mobile {
+      display: none;
+    }
+  }
+  
+  
+  
+  @media only screen and (min-width: 768px) {
+    #clients {
+      display: none;
+    }
+  }
+  
+  
+  
+  #desktop-menu a:hover{
+    font-weight: bolder;
+    text-decoration-line: underline;
+  }
+  
+  #mobile-menu a:hover{
+    font-weight: bolder;
+    text-decoration-line: underline;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .button-wrapper {
+    position: relative; /* Establishes a positioning context */
+    height: 100vh; /* Full height of the viewport */
+    text-align: center;
+  }
+  
+  .button-wrapper button {
+    position: absolute;
+    top: 50%; /* Moves button to the middle vertically */
+    left: 50%; /* Moves button to the middle horizontally */
+    transform: translate(-50%, -50%); /* Centers the button */
+  }
