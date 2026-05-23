@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - BMD Media | Professional Photography & Cinematography</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Lobster&display=swap" rel="stylesheet">
+    <title>Portfolio - BMD Media | Professional Photography Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://thebmdmedia.com/favicon.ico' rel='icon' type='image/x-icon' />
+    <meta name="description" content="Explore BMD Media's professional photography portfolio — weddings, portraits, events, fashion, and commercial work. Capturing life's most beautiful moments.">
+    <meta property="og:description" content="Explore BMD Media's professional photography portfolio — weddings, portraits, events, fashion, and commercial work.">            
+    <meta property="og:site_name" content="BMD Media">
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="Portfolio - BMD Media">
+    <meta property="og:locale" content="en_US">
+    <title>Portfolio - BMD Media | Professional Photography Gallery</title>
     <style>
         * {
             margin: 0;
@@ -80,7 +88,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.95);
             display: none;
             flex-direction: column;
             justify-content: center;
@@ -101,7 +109,7 @@
         .overlay ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 18px;
             font-weight: bold;
         }
 
@@ -114,9 +122,10 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            font-size: 24px;
+            font-size: 28px;
             cursor: pointer;
             color: #fff;
+            font-weight: bold;
         }
 
         /* Media Query for Mobile Devices - ORIGINAL */
@@ -149,11 +158,11 @@
             border-bottom: 2px solid #fff;
         }
 
-        /* Showcase - ORIGINAL */
+        /* Showcase - ORIGINAL STYLE */
         #showcase {
             position: relative;
             min-height: 100px;
-            background: url('https://thebmdmedia.com/img/bmd-img-wait-4.webp') no-repeat center center/cover;
+            background: url('https://thebmdmedia.com/img/bmd-img-44.webp') no-repeat center center/cover;
             text-align: center;
             color: #ffffff;
             height: 100vh;
@@ -176,7 +185,6 @@
             z-index: 2;
         }
 
-        /* Hero text - original style preserved */
         .rt {
             top: 250px;
             background: rgba(0, 0, 0, 0.5);
@@ -186,6 +194,7 @@
             border-radius: 50px;
             position: relative;
             z-index: 2;
+            padding: 0.8rem 1.5rem;
         }
 
         .rt h1 {
@@ -205,129 +214,207 @@
             .rt h1 {
                 font-size: 18px;
             }
-            #showcase {
-                height: 60vh;
-            }
         }
 
-        /* ===== MODERN PROFESSIONAL REDESIGN FOR SERVICES CONTENT (below header) ===== */
+        /* ===== MODERN PORTFOLIO PAGE STYLES ===== */
         
-        /* Services section - modern card grid */
-        .services-section {
-            max-width: 1280px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .service {
-            display: flex;
-            align-items: center;
-            gap: 2.5rem;
+        /* Filter Section */
+        .portfolio-filter {
+            padding: 2rem 1rem;
+            text-align: center;
             background: #ffffff;
-            border-radius: 28px;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .filter-btn {
+            background: #f0f2f5;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #3a5464;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .filter-btn:hover {
+            background: #e8491d20;
+            color: #e8491d;
+        }
+
+        .filter-btn.active {
+            background: #e8491d;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(232, 73, 29, 0.3);
+        }
+
+        /* Gallery Section */
+        .portfolio-gallery {
+            padding: 3rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.35s ease;
-            border: 1px solid rgba(0, 0, 0, 0.03);
+            cursor: pointer;
+            aspect-ratio: 4 / 3;
+            background: #eef2f7;
+            transition: all 0.4s ease;
         }
 
-        .service:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 24px 40px -12px rgba(232, 73, 29, 0.12);
-            border-color: rgba(232, 73, 29, 0.15);
-        }
-
-        .service-photo {
-            width: 320px;
-            height: 260px;
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .service:hover .service-photo {
-            transform: scale(1.02);
+        .gallery-item:hover img {
+            transform: scale(1.05);
         }
 
-        .service-info {
-            flex: 1;
-            padding: 1.5rem 1.5rem 1.5rem 0;
-        }
-
-        .service-info h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #1e2a32, #2c3e50);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 0.75rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .service-info h2:after {
-            content: '';
+        .gallery-overlay {
             position: absolute;
-            bottom: -6px;
+            bottom: 0;
             left: 0;
-            width: 50px;
-            height: 3px;
-            background: #e8491d;
-            border-radius: 3px;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 1.5rem 1rem 0.8rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
         }
 
-        .service-info p {
-            font-size: 0.95rem;
-            line-height: 1.65;
-            color: #3a5464;
-            margin-top: 0.8rem;
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
         }
 
-        /* alternating layout for visual interest */
-        .service:nth-child(even) {
-            flex-direction: row-reverse;
+        .gallery-overlay h3 {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
         }
 
-        .service:nth-child(even) .service-info {
-            padding: 1.5rem 0 1.5rem 1.5rem;
+        .gallery-overlay p {
+            color: #e8491d;
+            font-size: 0.75rem;
+            font-weight: 500;
         }
 
-        /* Consultation section - premium callout */
-        .consultation-section {
-            background: linear-gradient(135deg, #1a2a2f 0%, #0f1e24 100%);
-            padding: 4rem 2rem;
-            margin: 2rem 0 0;
-            text-align: center;
-            position: relative;
-        }
-
-        .consultation-section::before {
-            content: '';
-            position: absolute;
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #e8491d, #f39c12, #e8491d);
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
         }
 
-        .consultation-section h2 {
-            font-size: 2.2rem;
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85%;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .lightbox-close:hover {
+            color: #e8491d;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #fff;
+            font-size: 0.9rem;
+            background: rgba(0,0,0,0.6);
+            padding: 0.5rem;
+            width: fit-content;
+            margin: 0 auto;
+            border-radius: 40px;
+        }
+
+        /* CTA Section */
+        .portfolio-cta {
+            background: linear-gradient(135deg, #1a2a2f 0%, #0f1e24 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .portfolio-cta h2 {
+            font-size: 2rem;
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 1rem;
-            letter-spacing: -0.3px;
         }
 
-        .consultation-section p {
-            font-size: 1rem;
-            max-width: 760px;
-            margin: 0 auto;
+        .portfolio-cta p {
             color: #ccdce5;
-            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #e8491d;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #c7360c;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(232, 73, 29, 0.3);
         }
 
         /* ===== NEW PROFESSIONAL FOOTER ===== */
@@ -551,36 +638,22 @@
         }
 
         @media (max-width: 768px) {
-            .services-section {
-                padding: 0 1rem;
-                margin: 2rem auto;
+            .portfolio-gallery {
+                padding: 2rem 1rem;
             }
-            .service {
-                flex-direction: column !important;
-                background: white;
-                border-radius: 24px;
-                margin-bottom: 1rem;
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1rem;
             }
-            .service-photo {
-                width: 100%;
-                height: 220px;
+            .filter-buttons {
+                gap: 0.5rem;
             }
-            .service-info {
-                padding: 1rem 1.5rem 1.8rem !important;
-                text-align: center;
+            .filter-btn {
+                padding: 0.4rem 1rem;
+                font-size: 0.75rem;
             }
-            .service-info h2:after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            .service-info h2 {
+            .portfolio-cta h2 {
                 font-size: 1.5rem;
-            }
-            .consultation-section h2 {
-                font-size: 1.7rem;
-            }
-            .consultation-section p {
-                font-size: 0.9rem;
             }
             .footer-grid {
                 gap: 2rem;
@@ -600,14 +673,6 @@
             .footer-legal {
                 justify-content: center;
             }
-            .footer-brand p {
-                max-width: 100%;
-                text-align: center;
-            }
-            .footer-logo-text {
-                display: block;
-                text-align: center;
-            }
         }
     </style>
 </head>
@@ -615,13 +680,13 @@
     <header id="showcase">
         <nav>
             <div class="logo">
-                <a href="https://thebmdmedia.com/"><img src="https://thebmdmedia.com/img/bmd-logo.webp" alt="BMD Media Logo"></a>
+                <a href="index.html"><img src="https://thebmdmedia.com/img/bmd-logo.webp" alt="BMD Media Logo"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html" style="color: #e8491d; text-decoration: underline; font-weight: bold;">Portfolio</a></li>
                 <li><a href="videos.html">Videos</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="privacy.html">Privacy</a></li>
@@ -634,86 +699,53 @@
             </div>
         </nav>
         <div class="rt">
-            <h1><span>Our</span> Services</h1>
+            <h1><span>Our</span> Portfolio</h1>
         </div>
     </header>
     <div class="overlay" id="overlay">
-        <div class="close-btn" id="close-btn">X</div>
+        <div class="close-btn" id="close-btn">✕</div>
         <ul>
             <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="videos.html">Videos</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html" style="color: #e8491d; text-decoration: underline; font-weight: bold;">Portfolio</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 
-    <!-- Modern services grid -->
-    <div class="services-section">
-        <div class="service">
-            <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-35.webp" alt="Event Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Event Photography</h2>
-                <p>Our event photography service covers corporate events, weddings, birthdays, and more. We specialize in capturing candid moments that tell the story of your event beautifully, with an unobtrusive approach that puts guests at ease. From grand celebrations to intimate gatherings, every frame reflects genuine emotion and elegance.</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <img src="https://thebmdmedia.com/img/bmd-img-45.webp" alt="Portrait Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Portrait Photography</h2>
-                <p>We create stunning portrait photography for individuals, families, and businesses. Whether in our studio or on location, we ensure you look your best with expert lighting and posing direction. Each portrait is crafted to reveal personality and confidence, perfect for personal branding or cherished family heirlooms.</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-40.webp" alt="Product Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Product Photography</h2>
-                <p>Showcase your products with our professional product photography. Perfect for e-commerce, catalogs, and advertisements, we focus on lighting and detail to highlight your product's best features. From minimalistic white-background shots to creative lifestyle compositions, we elevate your brand's visual identity.</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <img src="https://thebmdmedia.com/img/bmd-img-46.webp" alt="Fashion Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Fashion Photography</h2>
-                <p>We offer high-end fashion photography services for brands, designers, and magazines. Our creative approach ensures your fashion story is told through captivating visuals — from editorial shoots to lookbooks and runway coverage. We blend contemporary aesthetics with timeless sophistication.</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <img src="https://thebmdmedia.com/img/bmd-img-37.webp" alt="Studio Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Studio Photography</h2>
-                <p>Our studio photography service offers professional, high-quality portraits for individuals, families, and businesses. We specialize in creating timeless, posed images that capture your personality, style, and essence, providing you with beautiful, lasting memories. Controlled lighting and premium backdrops guarantee exceptional results.</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <img src="https://thebmdmedia.com/img/bmd-img-36.webp" alt="Cinematography" class="service-photo">
-            <div class="service-info">
-                <h2>Cinematography</h2>
-                <p>Our cinematography services bring your story to life through stunning visuals and expert camera work. We specialize in capturing high-quality, cinematic footage for films, commercials, weddings, and events, providing you with a beautiful, lasting record of your special moments. Every project is treated with narrative precision.</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <img src="https://thebmdmedia.com/img/special.webp" alt="Documentary Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Documentary</h2>
-                <p>Our documentary services tell real stories that inspire, educate, and captivate. With a keen eye for detail and a passion for storytelling, we craft compelling narratives that shed light on the human experience, spark meaningful conversations, and leave a lasting impact. Authentic and unfiltered, we capture truth as it unfolds.</p>
-            </div>
+    <!-- Filter Section -->
+    <div class="portfolio-filter">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Work</button>
+            <button class="filter-btn" data-filter="wedding">Weddings</button>
+            <button class="filter-btn" data-filter="portrait">Portraits</button>
+            <button class="filter-btn" data-filter="event">Events</button>
+            <button class="filter-btn" data-filter="fashion">Fashion</button>
         </div>
     </div>
 
-    <!-- Consultation section redesigned -->
-    <div class="consultation-section">
-        <h2>Consultation & Planning</h2>
-        <p>We offer personalized consultations to ensure your photography session is tailored to your specific needs. From pre-event planning to post-production services, we guide you every step of the way to create images you'll love. Our team collaborates closely with you — discussing creative direction, timelines, and deliverables — so your vision becomes a stunning reality.</p>
+    <!-- Gallery Section -->
+    <div class="portfolio-gallery">
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Gallery items will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="portfolio-cta">
+        <h2>Ready to Create Your Story?</h2>
+        <p>Let's collaborate and bring your vision to life with stunning photography that captures every precious moment.</p>
+        <a href="contact.html" class="cta-button"><i class="fas fa-calendar-alt"></i> Book a Session</a>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img id="lightboxImg" src="" alt="">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
 
     <!-- Footer -->
@@ -778,46 +810,130 @@
     </footer>
 
     <script>
-        // Mobile overlay functionality - preserved original
-        const hamburger = document.getElementById('hamburger-menu');
-        const overlay = document.getElementById('overlay');
-        const closeBtn = document.getElementById('close-btn');
+        // Portfolio data - using actual BMD Media images from your website
+        const portfolioData = [
+            { src: "https://thebmdmedia.com/img/bmd-img-16.webp", category: "wedding", title: "Elegant Wedding Ceremony", alt: "Wedding Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-17.webp", category: "wedding", title: "Bride & Groom Portrait", alt: "Wedding Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-18.webp", category: "portrait", title: "Stylish Portrait Session", alt: "Portrait Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-19.webp", category: "event", title: "Corporate Event Coverage", alt: "Event Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-20.webp", category: "fashion", title: "Fashion Editorial", alt: "Fashion Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-21.webp", category: "portrait", title: "Creative Portrait", alt: "Portrait Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-wait-4.webp", category: "wedding", title: "Wedding Reception", alt: "Wedding Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-23.webp", category: "event", title: "Birthday Celebration", alt: "Event Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-24.webp", category: "portrait", title: "Family Portrait", alt: "Portrait Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-25.webp", category: "fashion", title: "Fashion Campaign", alt: "Fashion Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-26.webp", category: "wedding", title: "Wedding Details", alt: "Wedding Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-27.webp", category: "portrait", title: "Professional Headshot", alt: "Portrait Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-61.webp", category: "event", title: "Gala Event", alt: "Event Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-64.webp", category: "fashion", title: "Fashion Show", alt: "Fashion Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-30.webp", category: "portrait", title: "Maternity Shoot", alt: "Portrait Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-65.webp", category: "wedding", title: "Wedding Dance", alt: "Wedding Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-33.webp", category: "event", title: "Concert Photography", alt: "Event Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-35.webp", category: "portrait", title: "Artistic Portrait", alt: "Portrait Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-36.webp", category: "fashion", title: "Fashion Lookbook", alt: "Fashion Photography" },
+            { src: "https://thebmdmedia.com/img/bmd-img-37.webp", category: "portrait", title: "Studio Portrait", alt: "Portrait Photography" }
+        ];
+
+        // Render gallery
+        function renderGallery(filter = "all") {
+            const galleryGrid = document.getElementById("galleryGrid");
+            const filteredData = filter === "all" 
+                ? portfolioData 
+                : portfolioData.filter(item => item.category === filter);
+            
+            galleryGrid.innerHTML = filteredData.map(item => `
+                <div class="gallery-item" data-category="${item.category}" data-src="${item.src}" data-title="${item.title}">
+                    <img src="${item.src}" alt="${item.alt}" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>${item.title}</h3>
+                        <p>${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</p>
+                    </div>
+                </div>
+            `).join("");
+
+            // Re-attach click events for lightbox
+            document.querySelectorAll(".gallery-item").forEach(item => {
+                item.addEventListener("click", (e) => {
+                    const imgSrc = item.dataset.src;
+                    const imgTitle = item.dataset.title;
+                    openLightbox(imgSrc, imgTitle);
+                });
+            });
+        }
+
+        // Lightbox functions
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightboxImg");
+        const lightboxCaption = document.getElementById("lightboxCaption");
+
+        function openLightbox(src, title) {
+            lightboxImg.src = src;
+            lightboxCaption.textContent = title;
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
+        // Filter functionality
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        filterBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                const filterValue = btn.dataset.filter;
+                renderGallery(filterValue);
+            });
+        });
+
+        // Event listeners
+        document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Mobile menu
+        const hamburger = document.getElementById("hamburger-menu");
+        const overlay = document.getElementById("overlay");
+        const closeBtn = document.getElementById("close-btn");
         
         if (hamburger) {
-            hamburger.addEventListener('click', function() {
-                overlay.style.display = 'flex';
-            });
+            hamburger.addEventListener("click", () => overlay.style.display = "flex");
         }
         if (closeBtn) {
-            closeBtn.addEventListener('click', function() {
-                overlay.style.display = 'none';
-            });
+            closeBtn.addEventListener("click", () => overlay.style.display = "none");
         }
-        
+
         // Newsletter subscription
-        const subBtn = document.getElementById('subscribeFooterBtn');
-        if (subBtn) {
-            subBtn.addEventListener('click', function(e) {
+        const subscribeBtn = document.getElementById("subscribeBtn");
+        if (subscribeBtn) {
+            subscribeBtn.addEventListener("click", (e) => {
                 e.preventDefault();
-                let emailInput = document.getElementById('newsletterEmailFooter');
-                let email = emailInput.value.trim();
-                if (email && email.includes('@') && email.includes('.')) {
+                const emailInput = document.getElementById("newsletterEmail");
+                const email = emailInput.value.trim();
+                if (email && email.includes("@") && email.includes(".")) {
                     alert(`Thanks for subscribing! Updates will be sent to ${email}.`);
-                    emailInput.value = '';
+                    emailInput.value = "";
                 } else {
-                    alert('Please enter a valid email address.');
+                    alert("Please enter a valid email address.");
                 }
             });
         }
-        
-        // Back to top functionality
-        const backBtn = document.getElementById('backToTopBtn');
+
+        // Back to top
+        const backBtn = document.getElementById("backToTopBtn");
         if (backBtn) {
-            backBtn.addEventListener('click', function(e) {
+            backBtn.addEventListener("click", (e) => {
                 e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({ top: 0, behavior: "smooth" });
             });
         }
+
+        // Initial render
+        renderGallery("all");
     </script>
 </body>
 </html>

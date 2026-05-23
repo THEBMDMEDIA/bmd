@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,7 +15,6 @@
     <meta property="og:image:height" content="630">
     <meta property="og:tiltle" content="BMD MEDIA">
     <title>BMD MEDIA</title>
-    <link rel="stylesheet" href="./css/index.css">
     <link href='https://thebmdmedia.com/favicon.ico' rel='icon' type='image/x-icon' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -29,13 +27,14 @@
               <a href="https://thebmdmedia.com/"><img src="https://thebmdmedia.com/img/bmd-logo.webp" alt="ROM Hub Logo"></a>
           </div>
           <ul class="nav-links">
-            <li class="current"><a href="index.html" style="color: #e8491d; text-decoration: underline; font-weight: bold;">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" style="color: #e8491d; text-decoration: underline; font-weight: bold;">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="contact.html">Contact</a></li>
           </ul>
           <div class="hamburger-menu" id="hamburger-menu">
               <span></span>
@@ -57,14 +56,763 @@
         <li class="current"><a href="index.html" style="color: #e8491d; text-decoration: underline; font-weight: bold;">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Privacy</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
   </div>
 
+ <style>
+ body{
+    font: 15px/1.5 Arial, Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+    background-color:#f4f4f4;
+  }
+  
+  
+  
+  
+  
+  header {
+     
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom:#e8491d 3px solid;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo img {
+    height: auto;
+    width: 160px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover{
+  font-weight: bolder;
+  }
+  
+  .hamburger-menu {
+    cursor: pointer;
+    display: none; /* Hide by default */
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .hamburger-menu span {
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .overlay ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .overlay ul li {
+    margin: 20px 0;
+  }
+  
+  .overlay ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .overlay ul li a:hover{
+  text-decoration: underline;
+  font-weight: bolder;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide on mobile */
+    }
+    .hamburger-menu {
+        display: flex; /* Show on mobile */
+    }
+  
+    .text{
+      padding: 15px;
+    }
+  
+    #sv-bg{
+      display: none;
+    }
+  
+    .image h2{
+    padding: 15px;
+    }
+  
+    #fts{
+      text-align: center;
+    }
+  
+    .rt p{
+     display: none;
+    }
+  
     
+  }
+  
+  
+  /* Navigation */
+  nav ul {
+   display: flex;
+   list-style: none;
+  }
+  
+  nav ul li {
+   margin: 0 15px;
+  }
+  
+  nav ul li a {
+   color: #fff;
+   text-decoration: none;
+   padding: 5px;
+  }
+  
+  nav ul li a:hover {
+   border-bottom: 2px solid #fff;
+  }
+  
+  /* Hamburger Menu */
+  
+  
+  .bar {
+   width: 25px;
+   height: 3px;
+   background-color: white;
+   margin: 5px 0;
+  }
+  
+  
+  
+  
+  #showcase {
+   position: relative;
+   min-height: 100px;
+   background: url('https://shedrackolisa.github.io/bmd-media/img/special.webp') no-repeat center center/cover;
+   text-align: center;
+   color: #ffffff;
+   height: 100vh;
+   background-position: 50% 50%;
+  }
+  
+  
+  
+  #showcase::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5); /* Adjust this value to control the darkness */
+   z-index: 1; /* Ensure the overlay is on top */
+  }
+  
+  #showcase * {
+   position: relative;
+   z-index: 2; /* Ensure that content within #showcase is above the overlay */
+  }
+  
+  
+  
+  
+  
+  /* Global */
+  .container{
+    width:98%;
+    margin:auto;
+    overflow:hidden;
+  }
+  
+  ul{
+    margin:0;
+    padding:0;
+  }
+  
+  .button_1{
+    height:38px;
+    background:#e8491d;
+    border:0;
+    padding-left: 15px;
+    padding-right:15px;
+    color:#ffffff;
+    border-radius:5px;
+    width: 70%;
+    top:300px;
+  }
+  
+  
+  
+  .dark{
+    padding:15px;
+    background:#35424a;
+    color:#ffffff;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  
+  
+  /* === ORIGINAL FOOTER STYLES - COMPLETELY REPLACED === */
+  /* We will override .footer class with modern professional design */
+  
+  
+  .name-bg{
+      top:300px;
+  }
+  
+  
+  
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .hard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .image-grid {
+    column-count: 4; /* 4 columns for desktop */
+    column-gap: 1px; /* Space between columns */
+    width: 93%;
+  margin:auto;
+  overflow: hidden;
+  }
+  
+  @media (min-width: 1200px) {
+    .image-grid {
+    column-count: 4; /* 4 columns for desktop */
+    column-gap: 1px; /* Space between columns */
+    width: 80%;
+  margin:auto;
+  overflow: hidden;
+  }
+  }
+  
+  .image-grid img {
+    width: 100%;
+    margin-bottom: 1px; /* Space between images vertically */
+    break-inside: avoid; /* Prevent breaking images across columns */
+  }
+  
+  @media (max-width: 768px) {
+    .image-grid {
+        column-count: 1; /* 1 column for mobile */
+    }
+  }
+  
+  
+  
+  
+  .image {
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 3s ease, transform 1s ease;
+    /* transition: opacity 0.6s ease, transform 0.6s ease; */
+  }
+  
+  .image-loaded {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* General background container styling */
+  .background-container {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* Desktop Slideshow Background Style */
+  @media only screen and (min-width: 769px) {
+    .background-container {
+        background-image: url('https://shedrackolisa.github.io/bmd-media/img/special.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 3s ease-in-out;
+    }
+  }
+  
+  /* Mobile Static Background Styles */
+  @media only screen and (max-width: 768px) {
+    .background-container {
+        display: flex;
+        flex-direction: column;
+    }
+  
+    /* Each section on mobile with specified height and background */
+    .background-section {
+        width: 100%;
+        height: 33.33vh;
+        background-size: cover;
+        background-position: center;
+    }
+  
+    /* Background images for mobile sections */
+    .background-section.section1 {
+        background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp');
+    }
+  
+    .background-section.section2 {
+        background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp');
+    }
+  
+    .background-section.section3 {
+        background-image: url('https://shedrackolisa.github.io/bmd-media/img/special.webp');
+    }
+  }
+  
+  
+  
+  .bmd img{
+    float: left;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .mm{
+      display: none;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  @media only screen and (max-width: 768px) {
+    .hide-rate-card-on-mobile {
+      display: none;
+    }
+  }
+  
+  
+  
+  @media only screen and (min-width: 768px) {
+    #clients {
+      display: none;
+    }
+  }
+  
+  
+  
+  #desktop-menu a:hover{
+    font-weight: bolder;
+    text-decoration-line: underline;
+  }
+  
+  #mobile-menu a:hover{
+    font-weight: bolder;
+    text-decoration-line: underline;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .button-wrapper {
+    position: relative; /* Establishes a positioning context */
+    height: 100vh; /* Full height of the viewport */
+    text-align: center;
+  }
+  
+  .button-wrapper button {
+    position: absolute;
+    top: 50%; /* Moves button to the middle vertically */
+    left: 50%; /* Moves button to the middle horizontally */
+    transform: translate(-50%, -50%); /* Centers the button */
+  }
+
+  /* ========== NEW PROFESSIONAL FOOTER STYLES (only footer changed) ========== */
+  .footer {
+    background: #0a1927;  /* deep elegant dark teal-black instead of plain #35424a */
+    color: #f0f0f0;
+    padding: 3rem 0 1.5rem;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    border-top: none;  /* remove original orange border */
+    position: relative;
+    text-align: left;
+  }
+
+  /* add subtle gradient overlay for depth */
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #e8491d, #f39c12, #e8491d);
+  }
+
+  .footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* footer columns layout using CSS grid */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* brand column */
+  .footer-brand .footer-logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffffff 30%, #e8491d 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+  }
+
+  .footer-brand p {
+    color: #b0b9c2;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin: 0.75rem 0 1.25rem;
+    max-width: 260px;
+  }
+
+  /* quick contact info */
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    color: #ccd6df;
+  }
+  .contact-info i {
+    width: 24px;
+    color: #e8491d;
+    font-size: 1rem;
+  }
+
+  /* footer headings */
+  .footer h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.4rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+  }
+  .footer h4:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #e8491d;
+    border-radius: 2px;
+  }
+
+  /* footer link lists */
+  .footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-links-list li {
+    margin-bottom: 10px;
+  }
+  .footer-links-list a {
+    color: #ccd6df;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .footer-links-list a i {
+    font-size: 0.7rem;
+    color: #e8491d;
+    opacity: 0.7;
+  }
+  .footer-links-list a:hover {
+    color: #e8491d;
+    transform: translateX(4px);
+  }
+
+  /* social media icons modern */
+  .social-icons-modern {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .social-icons-modern a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  .social-icons-modern a:hover {
+    background: #e8491d;
+    color: #fff;
+    transform: translateY(-3px);
+  }
+
+  /* newsletter / call to action area */
+  .footer-newsletter p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: #b0b9c2;
+  }
+  .newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 10px;
+  }
+  .newsletter-form input {
+    flex: 1;
+    min-width: 140px;
+    padding: 10px 14px;
+    border: 1px solid #2c3e35;
+    background: #1e2a2a;
+    color: #fff;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    outline: none;
+    transition: 0.2s;
+  }
+  .newsletter-form input:focus {
+    border-color: #e8491d;
+  }
+  .newsletter-form button {
+    background: #e8491d;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .newsletter-form button:hover {
+    background: #c7360c;
+    transform: scale(0.98);
+  }
+
+  /* bottom bar */
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.8rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #9aa8b5;
+  }
+  .footer-bottom .copyright {
+    border-top: none;   /* remove extra border from original */
+    padding-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+  .footer-legal {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .footer-legal a {
+    color: #9aa8b5;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-legal a:hover {
+    color: #e8491d;
+  }
+
+  /* mobile responsive adjustments */
+  @media (max-width: 768px) {
+    .footer-grid {
+      gap: 2rem;
+    }
+    .footer-container {
+      padding: 0 24px;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-legal {
+      justify-content: center;
+    }
+    .footer-brand p {
+      max-width: 100%;
+    }
+    .newsletter-form {
+      flex-direction: column;
+    }
+    .newsletter-form button {
+      width: fit-content;
+    }
+    .footer h4:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .footer h4 {
+      display: block;
+      text-align: center;
+    }
+    .footer-links-list {
+      text-align: center;
+    }
+    .footer-links-list a {
+      justify-content: center;
+    }
+    .contact-info li {
+      justify-content: center;
+    }
+    .social-icons-modern {
+      justify-content: center;
+    }
+    .footer-brand {
+      text-align: center;
+    }
+  }
+
+  /* keep original back-to-top hidden? but add a smooth back-to-top button in footer (optional) */
+  .back-to-top-footer {
+    background: rgba(232, 73, 29, 0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 40px;
+    color: #e8491d;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.25s;
+    text-decoration: none;
+  }
+  .back-to-top-footer:hover {
+    background: #e8491d;
+    color: white;
+  }
+ </style>
   
     
   
@@ -191,29 +939,65 @@
   </div>
     
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="#">Blog</a>
-        <a href="#">Privacy</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <div class="social-icons">
-        <h3 style="color: #fff;">Follow Us</h3>
-        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="http://api.whatsapp.com/send?phone=2347051848117" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://youtube.com/@bmdmedia2978?si=IP5B6PEevFYa3twm" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com/bossmandosky?igsh=MmNmd3YzYWY2aXBj" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@chidoemihe?_t=8qvDa5zaXCA&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://pin.it/23gIVfjb6" target="_blank"><i class="fab fa-pinterest"></i></a>
-    </div>
-    <div class="copyright"><br>
-      BMD Media  © Copyright 2024, All Rights Reserved.
-    </div>
-  
-  </footer>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-text">BMD MEDIA</div>
+                    <p>Professional photography & cinematography. Capturing life's authentic moments with passion and artistry — weddings, portraits, events and creative storytelling.</p>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Enugu, Nigeria</li>
+                        <li><i class="fas fa-envelope"></i> hello@thebmdmedia.com</li>
+                        <li><i class="fas fa-phone-alt"></i> +234 705 184 8117</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Videos</a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="rate-card.html"><i class="fas fa-chevron-right"></i> Rate Card</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Connect</h4>
+                    <div class="social-icons-modern">
+                        <a href="http://api.whatsapp.com/send?phone=2347051848117" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://youtube.com/@bmdmedia2978" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/bossmandosky" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@chidoemihe" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://pin.it/23gIVfjb6" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                    <p style="margin-top: 1.2rem;">Stay inspired — get updates on latest works & offers.</p>
+                    <div class="newsletter-form">
+                        <input type="email" id="footerNewsletterEmail" placeholder="Your email address">
+                        <button id="footerSubscribeBtn">Subscribe <i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 BMD Media. All Rights Reserved. Capturing timeless elegance.</div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="#" class="back-to-top-footer" id="backToTopBtn"><i class="fas fa-arrow-up"></i> Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 <script>
@@ -252,6 +1036,24 @@ document.getElementById('overlay').style.display = 'none';
 
 document.getElementById('hamburger').addEventListener('click', function() {
 document.getElementById('nav').classList.toggle('active');
+});
+
+// Additional footer interactive: newsletter alert + back to top
+document.getElementById('subscribeBtn')?.addEventListener('click', function(e) {
+  e.preventDefault();
+  let emailInput = document.getElementById('newsletterEmail');
+  let email = emailInput.value.trim();
+  if(email && email.includes('@') && email.includes('.')) {
+    alert(`Thanks for subscribing! Updates will be sent to ${email}.`);
+    emailInput.value = '';
+  } else {
+    alert('Please enter a valid email address.');
+  }
+});
+
+document.getElementById('backToTopBtn')?.addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
     <script src="bmd.js"></script> 

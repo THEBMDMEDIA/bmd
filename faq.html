@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - BMD Media | Frequently Asked Questions About Photography Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://thebmdmedia.com/favicon.ico' rel='icon' type='image/x-icon' />
+    <meta name="description" content="Find answers to frequently asked questions about BMD Media's photography services, pricing, booking process, delivery timelines, and more.">
+    <meta property="og:description" content="Find answers to frequently asked questions about BMD Media's professional photography services.">            
+    <meta property="og:site_name" content="BMD Media">
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="FAQs - BMD Media">
+    <meta property="og:locale" content="en_US">
+    <title>FAQs - BMD Media | Frequently Asked Questions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Futura', Helvetica, sans-serif;
+            background-color: #faf9fc;
+            color: #1e2a32;
+            line-height: 1.6;
+        }
+
+        /* ===== ORIGINAL HEADER & NAVIGATION - COMPLETELY PRESERVED ===== */
+        header {
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: #e8491d 3px solid;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: auto;
+            width: 160px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            font-weight: bolder;
+        }
+
+        .hamburger-menu {
+            cursor: pointer;
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger-menu span {
+            width: 15px;
+            height: 2px;
+            background-color: #fff;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .overlay ul li {
+            margin: 20px 0;
+        }
+
+        .overlay ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .overlay ul li a:hover {
+            text-decoration: underline;
+            font-weight: bolder;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Media Query for Mobile Devices - ORIGINAL */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+        }
+
+        /* Navigation - ORIGINAL */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        /* Showcase - ORIGINAL STYLE */
+        #showcase {
+            position: relative;
+            min-height: 100px;
+            background: url('https://thebmdmedia.com/img/bmd-img-36.webp') no-repeat center center/cover;
+            text-align: center;
+            color: #ffffff;
+            height: 60vh;
+            background-position: 50% 50%;
+        }
+
+        #showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        #showcase * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .rt {
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.55);
+            width: 60%;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 50px;
+            position: relative;
+            z-index: 2;
+            padding: 0.8rem 1.5rem;
+        }
+
+        .rt h1 {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .rt h1 span {
+            color: #e8491d;
+        }
+
+        @media (max-width: 768px) {
+            .rt {
+                width: 85%;
+            }
+            .rt h1 {
+                font-size: 18px;
+            }
+            #showcase {
+                height: 40vh;
+            }
+        }
+
+        /* ===== FAQ PAGE STYLES ===== */
+        .faq-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Search Bar */
+        .faq-search {
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .faq-search input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            font-size: 1rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 60px;
+            background: #ffffff;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .faq-search input:focus {
+            outline: none;
+            border-color: #e8491d;
+            box-shadow: 0 0 0 3px rgba(232, 73, 29, 0.1);
+        }
+
+        .faq-search i {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9aa8b5;
+            font-size: 1.1rem;
+        }
+
+        /* Category Filters */
+        .faq-categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .cat-btn {
+            background: #f0f2f5;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #3a5464;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cat-btn:hover {
+            background: #e8491d20;
+            color: #e8491d;
+        }
+
+        .cat-btn.active {
+            background: #e8491d;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(232, 73, 29, 0.3);
+        }
+
+        /* FAQ Accordion */
+        .faq-section {
+            margin-bottom: 2rem;
+        }
+
+        .faq-category-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e2a32;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e8491d30;
+            display: inline-block;
+        }
+
+        .faq-accordion {
+            background: #ffffff;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border: 1px solid #eef2f7;
+            transition: all 0.2s ease;
+        }
+
+        .faq-accordion:hover {
+            border-color: #e8491d30;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1e2a32;
+            transition: all 0.2s;
+        }
+
+        .faq-question:hover {
+            background: #fef5e8;
+        }
+
+        .faq-question h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0;
+            flex: 1;
+            padding-right: 1rem;
+        }
+
+        .faq-question i {
+            color: #e8491d;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: #fafbfd;
+            border-top: 1px solid transparent;
+        }
+
+        .faq-accordion.active .faq-answer {
+            max-height: 500px;
+            border-top-color: #eef2f7;
+        }
+
+        .faq-accordion.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer p {
+            padding: 1.2rem 1.5rem;
+            color: #3a5464;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .faq-answer a {
+            color: #e8491d;
+            text-decoration: none;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            background: #ffffff;
+            border-radius: 24px;
+            color: #5a6e7c;
+        }
+
+        .no-results i {
+            font-size: 3rem;
+            color: #e8491d;
+            margin-bottom: 1rem;
+        }
+
+        /* Still Have Questions CTA */
+        .faq-cta {
+            background: linear-gradient(135deg, #1a2a2f 0%, #0f1e24 100%);
+            border-radius: 28px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .faq-cta h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-cta p {
+            color: #ccdce5;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #e8491d;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #c7360c;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(232, 73, 29, 0.3);
+        }
+
+        /* ===== NEW PROFESSIONAL FOOTER ===== */
+        .footer {
+            background: #0a1927;
+            color: #f0f0f0;
+            padding: 3rem 0 1.5rem;
+            font-family: 'Inter', sans-serif;
+            border-top: none;
+            position: relative;
+            text-align: left;
+        }
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #e8491d, #f39c12, #e8491d);
+        }
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .footer-brand .footer-logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 30%, #e8491d 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+        }
+        .footer-brand p {
+            color: #b0b9c2;
+            line-height: 1.5;
+            font-size: 0.9rem;
+            margin: 0.75rem 0 1.25rem;
+            max-width: 260px;
+        }
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: #ccd6df;
+        }
+        .contact-info i {
+            width: 24px;
+            color: #e8491d;
+        }
+        .footer h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.4rem;
+            position: relative;
+            display: inline-block;
+        }
+        .footer h4:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #e8491d;
+            border-radius: 2px;
+        }
+        .footer-links-list {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links-list li {
+            margin-bottom: 10px;
+        }
+        .footer-links-list a {
+            color: #ccd6df;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .footer-links-list a i {
+            font-size: 0.7rem;
+            color: #e8491d;
+            opacity: 0.7;
+        }
+        .footer-links-list a:hover {
+            color: #e8491d;
+            transform: translateX(4px);
+        }
+        .social-icons-modern {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .social-icons-modern a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .social-icons-modern a:hover {
+            background: #e8491d;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        .footer-newsletter p {
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            color: #b0b9c2;
+        }
+        .newsletter-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 10px;
+        }
+        .newsletter-form input {
+            flex: 1;
+            min-width: 140px;
+            padding: 10px 14px;
+            border: 1px solid #2c3e35;
+            background: #1e2a2a;
+            color: #fff;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            outline: none;
+        }
+        .newsletter-form input:focus {
+            border-color: #e8491d;
+        }
+        .newsletter-form button {
+            background: #e8491d;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 40px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .newsletter-form button:hover {
+            background: #c7360c;
+            transform: scale(0.98);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.8rem;
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: #9aa8b5;
+        }
+        .footer-bottom .copyright {
+            border-top: none;
+            padding-top: 0;
+            margin-bottom: 0;
+        }
+        .footer-legal {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .footer-legal a {
+            color: #9aa8b5;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-legal a:hover {
+            color: #e8491d;
+        }
+        .back-to-top-footer {
+            background: rgba(232, 73, 29, 0.15);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 40px;
+            color: #e8491d;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.25s;
+            text-decoration: none;
+        }
+        .back-to-top-footer:hover {
+            background: #e8491d;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 1.5rem;
+            }
+            .faq-question {
+                padding: 1rem;
+            }
+            .faq-question h3 {
+                font-size: 0.9rem;
+            }
+            .faq-answer p {
+                padding: 1rem;
+            }
+            .footer-grid {
+                gap: 2rem;
+                text-align: center;
+            }
+            .footer h4:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .contact-info li {
+                justify-content: center;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-legal {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="showcase">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="https://thebmdmedia.com/img/bmd-logo.webp" alt="BMD Media Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="rt">
+            <h1><span>Frequently</span> Asked Questions</h1>
+        </div>
+    </header>
+    <div class="overlay" id="overlay">
+        <div class="close-btn" id="close-btn">✕</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- FAQ Content -->
+    <div class="faq-container">
+        <!-- Search Bar -->
+        <div class="faq-search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="faqSearch" placeholder="Search for answers... (e.g., pricing, delivery, booking)">
+        </div>
+
+        <!-- Category Filters -->
+        <div class="faq-categories">
+            <button class="cat-btn active" data-cat="all">All Questions</button>
+            <button class="cat-btn" data-cat="booking">Booking & Pricing</button>
+            <button class="cat-btn" data-cat="delivery">Delivery & Timeline</button>
+            <button class="cat-btn" data-cat="services">Services & Coverage</button>
+            <button class="cat-btn" data-cat="rights">Rights & Usage</button>
+            <button class="cat-btn" data-cat="general">General</button>
+        </div>
+
+        <!-- FAQ Accordions Container -->
+        <div id="faqAccordions">
+            <!-- Booking & Pricing Section -->
+            <div class="faq-section" data-section="booking">
+                <h2 class="faq-category-title">Booking & Pricing</h2>
+                
+                <div class="faq-accordion" data-category="booking">
+                    <div class="faq-question">
+                        <h3>How do I book a photography session with BMD Media?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can book a session by contacting us through our <a href="contact.html">Contact page</a>, calling us at +234 705 184 8117, or sending an email to hello@thebmdmedia.com. A 30% - 50% non-refundable deposit is required to secure your date.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="booking">
+                    <div class="faq-question">
+                        <h3>What payment methods do you accept?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept bank transfers, credit/debit cards, and mobile payments (Paystack, Flutterwave). All payments are in Nigerian Naira (₦) unless otherwise specified. Payment details are provided on your invoice.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="booking">
+                    <div class="faq-question">
+                        <h3>Is the deposit refundable if I cancel?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, the deposit is non-refundable as it secures your date and prevents us from booking other clients. However, depending on the cancellation notice period, you may reschedule (subject to availability) or receive partial refund per our cancellation policy in the <a href="terms.html">Terms of Service</a>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="booking">
+                    <div class="faq-question">
+                        <h3>Do you offer payment plans?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer flexible payment plans for our premium packages. Please discuss this during your consultation, and we'll create a payment schedule that works for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delivery & Timeline Section -->
+            <div class="faq-section" data-section="delivery">
+                <h2 class="faq-category-title">Delivery & Timeline</h2>
+
+                <div class="faq-accordion" data-category="delivery">
+                    <div class="faq-question">
+                        <h3>How long does it take to receive my edited photos?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standard delivery time is 2-6 weeks, depending on the package and season. Weddings typically take 4-6 weeks, while portrait sessions take 2-3 weeks. We'll provide an estimated timeline in your contract.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="delivery">
+                    <div class="faq-question">
+                        <h3>How will I receive my photos?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We deliver high-resolution digital images via a secure online gallery (Pixieset or similar). You'll receive a private link to download, share, and order prints directly from the gallery.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="delivery">
+                    <div class="faq-question">
+                        <h3>Do you offer rush delivery?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, rush delivery is available for an additional fee. Please inquire at time of booking to discuss expedited editing options.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services & Coverage Section -->
+            <div class="faq-section" data-section="services">
+                <h2 class="faq-category-title">Services & Coverage</h2>
+
+                <div class="faq-accordion" data-category="services">
+                    <div class="faq-question">
+                        <h3>What types of photography do you specialize in?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We specialize in weddings, portraits (individual, family, maternity), corporate events, fashion, product photography, and documentary storytelling. Visit our <a href="services.html">Services page</a> for more details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="services">
+                    <div class="faq-question">
+                        <h3>Do you travel for events outside Enugu/Lagos?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We serve clients across Nigeria and internationally. Travel fees may apply depending on distance. We'll discuss travel arrangements during consultation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="services">
+                    <div class="faq-question">
+                        <h3>How many hours of coverage do I need for my wedding?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most weddings require 8-10 hours of coverage (getting ready through reception). We offer customizable packages — from 4 hours to full-day coverage. Schedule a consultation to discuss your timeline.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="services">
+                    <div class="faq-question">
+                        <h3>Do you provide videography services as well?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer both photography and videography packages, including cinematic highlight reels, full-length documentaries, and drone footage.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rights & Usage Section -->
+            <div class="faq-section" data-section="rights">
+                <h2 class="faq-category-title">Rights & Usage</h2>
+
+                <div class="faq-accordion" data-category="rights">
+                    <div class="faq-question">
+                        <h3>Who owns the copyright to the photos?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>BMD Media retains full copyright ownership of all images. You receive a print release and personal usage license, allowing you to share, print, and display photos for personal use. Commercial use requires additional licensing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="rights">
+                    <div class="faq-question">
+                        <h3>Can I share my photos on social media?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We encourage sharing. Please tag @bmdmedia and credit BMD Media. Feel free to share your gallery link with friends and family as well.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="rights">
+                    <div class="faq-question">
+                        <h3>Do you use client photos for your portfolio?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically use images for our portfolio, website, and social media unless you request otherwise. Let us know in writing if you prefer privacy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- General Section -->
+            <div class="faq-section" data-section="general">
+                <h2 class="faq-category-title">General Questions</h2>
+
+                <div class="faq-accordion" data-category="general">
+                    <div class="faq-question">
+                        <h3>Do you offer studio photography sessions?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We have a professional studio in Enugu for portraits, passport photos, and creative shoots. Studio sessions start at ₦15,000. View our <a href="rate-card.html">Rate Card</a> for details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="general">
+                    <div class="faq-question">
+                        <h3>What should I wear for my photoshoot?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend solid colors, avoid busy patterns. Neutrals, earth tones, and jewel tones photograph beautifully. We'll provide a style guide after booking to help you prepare.</p>
+                    </div>
+                </div>
+
+                <div class="faq-accordion" data-category="general">
+                    <div class="faq-question">
+                        <h3>How far in advance should I book?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For weddings, book 6-12 months in advance. For portrait sessions, 2-4 weeks notice is sufficient. Peak seasons (November-March) fill quickly, so early booking is recommended.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="no-results" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No results found</h3>
+            <p>Try different keywords or browse our categories above. Can't find your answer? Contact us directly!</p>
+        </div>
+
+        <!-- Still Have Questions CTA -->
+        <div class="faq-cta">
+            <h3>Still Have Questions?</h3>
+            <p>We're here to help! Reach out to us directly and we'll get back to you within 24 hours.</p>
+            <a href="contact.html" class="cta-button"><i class="fas fa-comment-dots"></i> Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-text">BMD MEDIA</div>
+                    <p>Professional photography & cinematography. Capturing life's authentic moments with passion and artistry — weddings, portraits, events and creative storytelling.</p>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Enugu, Nigeria</li>
+                        <li><i class="fas fa-envelope"></i> hello@thebmdmedia.com</li>
+                        <li><i class="fas fa-phone-alt"></i> +234 705 184 8117</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Videos</a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="rate-card.html"><i class="fas fa-chevron-right"></i> Rate Card</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Connect</h4>
+                    <div class="social-icons-modern">
+                        <a href="http://api.whatsapp.com/send?phone=2347051848117" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://youtube.com/@bmdmedia2978" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/bossmandosky" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@chidoemihe" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://pin.it/23gIVfjb6" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                    <p style="margin-top: 1.2rem;">Stay inspired — get updates on latest works & offers.</p>
+                    <div class="newsletter-form">
+                        <input type="email" id="footerNewsletterEmail" placeholder="Your email address">
+                        <button id="footerSubscribeBtn">Subscribe <i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 BMD Media. All Rights Reserved. Capturing timeless elegance.</div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="#" class="back-to-top-footer" id="backToTopBtn"><i class="fas fa-arrow-up"></i> Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile overlay functionality
+        const hamburger = document.getElementById('hamburger-menu');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('close-btn');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', function() {
+                overlay.style.display = 'flex';
+            });
+        }
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                overlay.style.display = 'none';
+            });
+        }
+
+        // Accordion functionality
+        const accordions = document.querySelectorAll('.faq-accordion');
+        accordions.forEach(accordion => {
+            const question = accordion.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                accordion.classList.toggle('active');
+            });
+        });
+
+        // Category filter functionality
+        const catBtns = document.querySelectorAll('.cat-btn');
+        const allFaqItems = document.querySelectorAll('.faq-accordion');
+        const noResults = document.getElementById('noResults');
+        const faqContainer = document.getElementById('faqAccordions');
+
+        function filterFAQs() {
+            const activeCat = document.querySelector('.cat-btn.active').dataset.cat;
+            const searchTerm = document.getElementById('faqSearch').value.toLowerCase().trim();
+            
+            let visibleCount = 0;
+            
+            allFaqItems.forEach(item => {
+                const itemCategory = item.dataset.category;
+                const questionText = item.querySelector('.faq-question h3').innerText.toLowerCase();
+                const answerText = item.querySelector('.faq-answer p').innerText.toLowerCase();
+                
+                const matchesCategory = activeCat === 'all' || itemCategory === activeCat;
+                const matchesSearch = searchTerm === '' || questionText.includes(searchTerm) || answerText.includes(searchTerm);
+                
+                if (matchesCategory && matchesSearch) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Show/hide section headers if no items visible in that section
+            const sections = document.querySelectorAll('.faq-section');
+            sections.forEach(section => {
+                const sectionItems = section.querySelectorAll('.faq-accordion');
+                let hasVisible = false;
+                sectionItems.forEach(item => {
+                    if (item.style.display !== 'none') hasVisible = true;
+                });
+                section.style.display = hasVisible ? 'block' : 'none';
+            });
+            
+            // Show no results message
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+
+        // Category button click
+        catBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                catBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filterFAQs();
+            });
+        });
+
+        // Search input
+        const searchInput = document.getElementById('faqSearch');
+        searchInput.addEventListener('input', filterFAQs);
+
+        // Newsletter subscription
+        const subscribeBtn = document.getElementById('subscribeBtn');
+        if (subscribeBtn) {
+            subscribeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                let emailInput = document.getElementById('newsletterEmail');
+                let email = emailInput.value.trim();
+                if (email && email.includes('@') && email.includes('.')) {
+                    alert(`Thanks for subscribing! Updates will be sent to ${email}.`);
+                    emailInput.value = '';
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+        }
+        
+        // Back to top functionality
+        const backBtn = document.getElementById('backToTopBtn');
+        if (backBtn) {
+            backBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+</html>

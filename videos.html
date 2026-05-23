@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - BMD Media | Cinematography & Video Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://thebmdmedia.com/favicon.ico' rel='icon' type='image/x-icon' />
+    <meta name="description" content="Explore BMD Media's cinematic video gallery — wedding films, event highlights, commercial videos, and behind-the-scenes content on our YouTube channel.">
+    <meta property="og:description" content="Explore BMD Media's cinematic video gallery — wedding films, event highlights, and commercial videos.">            
+    <meta property="og:site_name" content="BMD Media">
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="Videos - BMD Media">
+    <meta property="og:locale" content="en_US">
+    <title>Videos - BMD Media | Cinematic Video Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Futura', Helvetica, sans-serif;
+            background-color: #faf9fc;
+            color: #1e2a32;
+            line-height: 1.6;
+        }
+
+        /* ===== ORIGINAL HEADER & NAVIGATION - COMPLETELY PRESERVED ===== */
+        header {
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: #e8491d 3px solid;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: auto;
+            width: 160px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            font-weight: bolder;
+        }
+
+        .hamburger-menu {
+            cursor: pointer;
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger-menu span {
+            width: 15px;
+            height: 2px;
+            background-color: #fff;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .overlay ul li {
+            margin: 20px 0;
+        }
+
+        .overlay ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .overlay ul li a:hover {
+            text-decoration: underline;
+            font-weight: bolder;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Media Query for Mobile Devices - ORIGINAL */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+        }
+
+        /* Navigation - ORIGINAL */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        /* Showcase - ORIGINAL STYLE */
+        #showcase {
+            position: relative;
+            min-height: 100px;
+            background: url('https://thebmdmedia.com/img/bmd-img-46.webp') no-repeat center center/cover;
+            text-align: center;
+            color: #ffffff;
+            height: 60vh;
+            background-position: 50% 50%;
+        }
+
+        #showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        #showcase * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .rt {
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.55);
+            width: 60%;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 50px;
+            position: relative;
+            z-index: 2;
+            padding: 0.8rem 1.5rem;
+        }
+
+        .rt h1 {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .rt h1 span {
+            color: #e8491d;
+        }
+
+        @media (max-width: 768px) {
+            .rt {
+                width: 85%;
+            }
+            .rt h1 {
+                font-size: 18px;
+            }
+            #showcase {
+                height: 40vh;
+            }
+        }
+
+        /* ===== VIDEOS PAGE STYLES ===== */
+        .videos-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Category Filters */
+        .video-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .filter-btn {
+            background: #f0f2f5;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #3a5464;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .filter-btn:hover {
+            background: #e8491d20;
+            color: #e8491d;
+        }
+
+        .filter-btn.active {
+            background: #e8491d;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(232, 73, 29, 0.3);
+        }
+
+        /* YouTube Channel Banner */
+        .channel-banner {
+            background: linear-gradient(135deg, #1a2a2f 0%, #0f1e24 100%);
+            border-radius: 28px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .channel-info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .channel-icon {
+            width: 70px;
+            height: 70px;
+            background: #ff0000;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .channel-text h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .channel-text p {
+            color: #ccdce5;
+            font-size: 0.85rem;
+        }
+
+        .subscribe-btn {
+            background: #ff0000;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .subscribe-btn:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .video-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.35s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid #eef2f7;
+            cursor: pointer;
+        }
+
+        .video-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px -12px rgba(232, 73, 29, 0.12);
+            border-color: #e8491d20;
+        }
+
+        .video-thumbnail {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .video-card:hover .video-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(232, 73, 29, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            opacity: 0.9;
+        }
+
+        .play-overlay i {
+            color: white;
+            font-size: 1.5rem;
+            margin-left: 4px;
+        }
+
+        .video-card:hover .play-overlay {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: #e8491d;
+        }
+
+        .video-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .video-info {
+            padding: 1.2rem;
+        }
+
+        .video-category {
+            display: inline-block;
+            background: #e8491d10;
+            color: #e8491d;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .video-info h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            color: #1e2a32;
+        }
+
+        .video-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.7rem;
+            color: #7a8e9c;
+        }
+
+        .video-meta i {
+            margin-right: 0.3rem;
+            color: #e8491d;
+        }
+
+        /* Lightbox Modal for Video */
+        .video-lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .video-lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            background: #000;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .lightbox-iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: 0.2s;
+            background: none;
+            border: none;
+        }
+
+        .lightbox-close:hover {
+            color: #e8491d;
+        }
+
+        .lightbox-caption {
+            padding: 1rem;
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .videos-container {
+                padding: 1.5rem;
+            }
+            .channel-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .channel-info {
+                justify-content: center;
+            }
+        }
+
+        /* CTA Section */
+        .video-cta {
+            background: linear-gradient(135deg, #f8fafc, #ffffff);
+            border-radius: 28px;
+            padding: 2.5rem;
+            text-align: center;
+            border: 1px solid #eef2f7;
+            margin-top: 1rem;
+        }
+
+        .video-cta h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-cta p {
+            color: #5a6e7c;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #e8491d;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #c7360c;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(232, 73, 29, 0.3);
+        }
+
+        /* ===== NEW PROFESSIONAL FOOTER ===== */
+        .footer {
+            background: #0a1927;
+            color: #f0f0f0;
+            padding: 3rem 0 1.5rem;
+            font-family: 'Inter', sans-serif;
+            border-top: none;
+            position: relative;
+            text-align: left;
+        }
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #e8491d, #f39c12, #e8491d);
+        }
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .footer-brand .footer-logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 30%, #e8491d 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+        }
+        .footer-brand p {
+            color: #b0b9c2;
+            line-height: 1.5;
+            font-size: 0.9rem;
+            margin: 0.75rem 0 1.25rem;
+            max-width: 260px;
+        }
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: #ccd6df;
+        }
+        .contact-info i {
+            width: 24px;
+            color: #e8491d;
+        }
+        .footer h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.4rem;
+            position: relative;
+            display: inline-block;
+        }
+        .footer h4:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #e8491d;
+            border-radius: 2px;
+        }
+        .footer-links-list {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links-list li {
+            margin-bottom: 10px;
+        }
+        .footer-links-list a {
+            color: #ccd6df;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .footer-links-list a i {
+            font-size: 0.7rem;
+            color: #e8491d;
+            opacity: 0.7;
+        }
+        .footer-links-list a:hover {
+            color: #e8491d;
+            transform: translateX(4px);
+        }
+        .social-icons-modern {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .social-icons-modern a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .social-icons-modern a:hover {
+            background: #e8491d;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        .footer-newsletter p {
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            color: #b0b9c2;
+        }
+        .newsletter-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 10px;
+        }
+        .newsletter-form input {
+            flex: 1;
+            min-width: 140px;
+            padding: 10px 14px;
+            border: 1px solid #2c3e35;
+            background: #1e2a2a;
+            color: #fff;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            outline: none;
+        }
+        .newsletter-form input:focus {
+            border-color: #e8491d;
+        }
+        .newsletter-form button {
+            background: #e8491d;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 40px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .newsletter-form button:hover {
+            background: #c7360c;
+            transform: scale(0.98);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.8rem;
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: #9aa8b5;
+        }
+        .footer-bottom .copyright {
+            border-top: none;
+            padding-top: 0;
+            margin-bottom: 0;
+        }
+        .footer-legal {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .footer-legal a {
+            color: #9aa8b5;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-legal a:hover {
+            color: #e8491d;
+        }
+        .back-to-top-footer {
+            background: rgba(232, 73, 29, 0.15);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 40px;
+            color: #e8491d;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.25s;
+            text-decoration: none;
+        }
+        .back-to-top-footer:hover {
+            background: #e8491d;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                gap: 2rem;
+                text-align: center;
+            }
+            .footer h4:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .contact-info li {
+                justify-content: center;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-legal {
+                justify-content: center;
+            }
+            .footer-brand p {
+                max-width: 100%;
+                text-align: center;
+            }
+            .footer-logo-text {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="showcase">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="https://thebmdmedia.com/img/bmd-logo.webp" alt="BMD Media Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="videos.html" style="color: #e8491d; text-decoration: underline; font-weight: bold;">Videos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="rt">
+            <h1><span>Our</span> Videos</h1>
+        </div>
+    </header>
+    <div class="overlay" id="overlay">
+        <div class="close-btn" id="close-btn">✕</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="videos.html" style="color: #e8491d; text-decoration: underline; font-weight: bold;">Videos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Videos Content -->
+    <div class="videos-container">
+        <!-- Category Filters -->
+        <div class="video-filters">
+            <button class="filter-btn active" data-filter="all">All Videos</button>
+            <button class="filter-btn" data-filter="wedding">Wedding Films</button>
+            <button class="filter-btn" data-filter="event">Event Highlights</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+            <button class="filter-btn" data-filter="bts">Behind the Scenes</button>
+        </div>
+
+        <!-- YouTube Channel Banner -->
+        <div class="channel-banner">
+            <div class="channel-info">
+                <div class="channel-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="channel-text">
+                    <h3>Subscribe to BMD Media on YouTube</h3>
+                    <p>Watch our latest wedding films, event highlights, and cinematic stories</p>
+                </div>
+            </div>
+            <a href="https://youtube.com/@bmdmedia2978?si=IP5B6PEevFYa3twm" target="_blank" class="subscribe-btn">
+                <i class="fab fa-youtube"></i> Subscribe
+            </a>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="video-grid" id="videoGrid"></div>
+
+        <!-- CTA Section -->
+        <div class="video-cta">
+            <h3>Ready to Create Your Story on Film?</h3>
+            <p>From cinematic wedding films to compelling commercial videos, let's bring your vision to life.</p>
+            <a href="contact.html" class="cta-button"><i class="fas fa-video"></i> Book a Video Consultation</a>
+        </div>
+    </div>
+
+    <!-- Video Lightbox Modal -->
+    <div class="video-lightbox" id="videoLightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <iframe class="lightbox-iframe" id="lightboxIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-text">BMD MEDIA</div>
+                    <p>Professional photography & cinematography. Capturing life's authentic moments with passion and artistry — weddings, portraits, events and creative storytelling.</p>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Enugu, Nigeria</li>
+                        <li><i class="fas fa-envelope"></i> hello@thebmdmedia.com</li>
+                        <li><i class="fas fa-phone-alt"></i> +234 705 184 8117</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Videos</a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="rate-card.html"><i class="fas fa-chevron-right"></i> Rate Card</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Connect</h4>
+                    <div class="social-icons-modern">
+                        <a href="http://api.whatsapp.com/send?phone=2347051848117" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://youtube.com/@bmdmedia2978" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/bossmandosky" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@chidoemihe" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://pin.it/23gIVfjb6" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                    <p style="margin-top: 1.2rem;">Stay inspired — get updates on latest works & offers.</p>
+                    <div class="newsletter-form">
+                        <input type="email" id="footerNewsletterEmail" placeholder="Your email address">
+                        <button id="footerSubscribeBtn">Subscribe <i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 BMD Media. All Rights Reserved. Capturing timeless elegance.</div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="#" class="back-to-top-footer" id="backToTopBtn"><i class="fas fa-arrow-up"></i> Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Video data (YouTube video IDs and details)
+        const videosData = [
+            { id: 1, videoId: "dQw4w9WgXcQ", title: "Elegant Wedding Film - Chioma & Michael", category: "wedding", duration: "4:32", thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg", views: "2.5K views" },
+            { id: 2, videoId: "jNQXAC9IVRw", title: "Corporate Event Highlights - Tech Summit 2024", category: "event", duration: "3:15", thumbnail: "https://img.youtube.com/vi/jNQXAC9IVRw/hqdefault.jpg", views: "1.2K views" },
+            { id: 3, videoId: "YQHsXMglC9A", title: "Fashion Brand Commercial - Luxury Collection", category: "commercial", duration: "2:45", thumbnail: "https://img.youtube.com/vi/YQHsXMglC9A/hqdefault.jpg", views: "3.1K views" },
+            { id: 4, videoId: "tgbNymZ7vqY", title: "Behind the Scenes: Wedding Photoshoot", category: "bts", duration: "5:20", thumbnail: "https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg", views: "890 views" },
+            { id: 5, videoId: "GtL1huin9EE", title: "Traditional Wedding Highlights - Ada & Chuka", category: "wedding", duration: "6:12", thumbnail: "https://img.youtube.com/vi/GtL1huin9EE/hqdefault.jpg", views: "4.2K views" },
+            { id: 6, videoId: "mKVK7n0-4fc", title: "Product Launch Event - Sneaker Brand", category: "event", duration: "3:45", thumbnail: "https://img.youtube.com/vi/mKVK7n0-4fc/hqdefault.jpg", views: "1.8K views" },
+            { id: 7, videoId: "V-_O7nl0Ii0", title: "Music Video - Emerging Artist", category: "commercial", duration: "4:08", thumbnail: "https://img.youtube.com/vi/V-_O7nl0Ii0/hqdefault.jpg", views: "5.5K views" },
+            { id: 8, videoId: "0zGcUoRlhmw", title: "Studio Session Behind the Scenes", category: "bts", duration: "3:30", thumbnail: "https://img.youtube.com/vi/0zGcUoRlhmw/hqdefault.jpg", views: "620 views" },
+            { id: 9, videoId: "CevxZvSJLk8", title: "Birthday Surprise - Emotional Celebration", category: "event", duration: "4:15", thumbnail: "https://img.youtube.com/vi/CevxZvSJLk8/hqdefault.jpg", views: "1.5K views" }
+        ];
+
+        // Render video grid
+        function renderVideos(filter = "all") {
+            const videoGrid = document.getElementById("videoGrid");
+            const filteredVideos = filter === "all" 
+                ? videosData 
+                : videosData.filter(video => video.category === filter);
+            
+            videoGrid.innerHTML = filteredVideos.map(video => `
+                <div class="video-card" data-video-id="${video.videoId}" data-title="${video.title}">
+                    <div class="video-thumbnail">
+                        <img src="${video.thumbnail}" alt="${video.title}" loading="lazy">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <span class="video-duration">${video.duration}</span>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-category">${getCategoryLabel(video.category)}</span>
+                        <h3>${video.title}</h3>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> ${video.views}</span>
+                            <span><i class="fab fa-youtube"></i> YouTube</span>
+                        </div>
+                    </div>
+                </div>
+            `).join("");
+
+            // Attach click event to video cards
+            document.querySelectorAll(".video-card").forEach(card => {
+                card.addEventListener("click", () => {
+                    const videoId = card.dataset.videoId;
+                    const title = card.dataset.title;
+                    openVideoLightbox(videoId, title);
+                });
+            });
+        }
+
+        function getCategoryLabel(category) {
+            const labels = {
+                wedding: "Wedding Film",
+                event: "Event Highlight",
+                commercial: "Commercial",
+                bts: "Behind the Scenes"
+            };
+            return labels[category] || category;
+        }
+
+        // Lightbox functionality
+        const lightbox = document.getElementById("videoLightbox");
+        const lightboxIframe = document.getElementById("lightboxIframe");
+        const lightboxCaption = document.getElementById("lightboxCaption");
+        const lightboxClose = document.getElementById("lightboxClose");
+
+        function openVideoLightbox(videoId, title) {
+            lightboxIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            lightboxCaption.textContent = title;
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+            lightboxIframe.src = "";
+            lightbox.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
+        lightboxClose.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Filter functionality
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        filterBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                const filterValue = btn.dataset.filter;
+                renderVideos(filterValue);
+            });
+        });
+
+        // Mobile overlay
+        const hamburger = document.getElementById('hamburger-menu');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('close-btn');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', () => overlay.style.display = 'flex');
+        }
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => overlay.style.display = 'none');
+        }
+
+        // Footer newsletter subscription
+        const footerSubscribeBtn = document.getElementById('footerSubscribeBtn');
+        if (footerSubscribeBtn) {
+            footerSubscribeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                let emailInput = document.getElementById('footerNewsletterEmail');
+                let email = emailInput.value.trim();
+                if (email && email.includes('@') && email.includes('.')) {
+                    alert(`Thanks for subscribing! Updates will be sent to ${email}.`);
+                    emailInput.value = '';
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+        }
+
+        // Back to top
+        const backBtn = document.getElementById('backToTopBtn');
+        if (backBtn) {
+            backBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Initial render
+        renderVideos("all");
+    </script>
+</body>
+</html>

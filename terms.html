@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - BMD Media | Professional Photography & Cinematography</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Lobster&display=swap" rel="stylesheet">
+    <title>Terms of Service - BMD Media | Professional Photography Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://thebmdmedia.com/favicon.ico' rel='icon' type='image/x-icon' />
+    <meta name="description" content="BMD Media Terms of Service - Read our terms and conditions for photography services, bookings, payments, cancellations, and usage rights.">
+    <meta property="og:description" content="BMD Media Terms of Service - Terms and conditions for our professional photography services.">            
+    <meta property="og:site_name" content="BMD Media">
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="Terms of Service - BMD Media">
+    <meta property="og:locale" content="en_US">
+    <title>Terms of Service - BMD Media</title>
     <style>
         * {
             margin: 0;
@@ -17,7 +25,7 @@
             font-family: 'Inter', 'Futura', Helvetica, sans-serif;
             background-color: #faf9fc;
             color: #1e2a32;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         /* ===== ORIGINAL HEADER & NAVIGATION - COMPLETELY PRESERVED ===== */
@@ -80,7 +88,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.95);
             display: none;
             flex-direction: column;
             justify-content: center;
@@ -101,7 +109,7 @@
         .overlay ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 18px;
             font-weight: bold;
         }
 
@@ -114,9 +122,10 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            font-size: 24px;
+            font-size: 28px;
             cursor: pointer;
             color: #fff;
+            font-weight: bold;
         }
 
         /* Media Query for Mobile Devices - ORIGINAL */
@@ -149,14 +158,14 @@
             border-bottom: 2px solid #fff;
         }
 
-        /* Showcase - ORIGINAL */
+        /* Showcase - ORIGINAL STYLE */
         #showcase {
             position: relative;
             min-height: 100px;
-            background: url('https://thebmdmedia.com/img/bmd-img-wait-4.webp') no-repeat center center/cover;
+            background: url('https://thebmdmedia.com/img/bmd-img-45.webp') no-repeat center center/cover;
             text-align: center;
             color: #ffffff;
-            height: 100vh;
+            height: 60vh;
             background-position: 50% 50%;
         }
 
@@ -167,7 +176,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.55);
             z-index: 1;
         }
 
@@ -176,16 +185,17 @@
             z-index: 2;
         }
 
-        /* Hero text - original style preserved */
         .rt {
-            top: 250px;
-            background: rgba(0, 0, 0, 0.5);
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.55);
             width: 60%;
             margin: auto;
             overflow: hidden;
             border-radius: 50px;
             position: relative;
             z-index: 2;
+            padding: 0.8rem 1.5rem;
         }
 
         .rt h1 {
@@ -200,134 +210,171 @@
         @media (max-width: 768px) {
             .rt {
                 width: 85%;
-                top: 200px;
             }
             .rt h1 {
                 font-size: 18px;
             }
             #showcase {
-                height: 60vh;
+                height: 40vh;
             }
         }
 
-        /* ===== MODERN PROFESSIONAL REDESIGN FOR SERVICES CONTENT (below header) ===== */
-        
-        /* Services section - modern card grid */
-        .services-section {
-            max-width: 1280px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
+        /* ===== TERMS OF SERVICE CONTENT STYLES ===== */
+        .terms-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
         }
 
-        .service {
+        /* Last updated banner */
+        .last-updated {
+            background: linear-gradient(135deg, #e8491d10, #f39c1210);
+            border-left: 4px solid #e8491d;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
             display: flex;
             align-items: center;
-            gap: 2.5rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .last-updated i {
+            color: #e8491d;
+            font-size: 1.5rem;
+        }
+
+        .last-updated p {
+            color: #3a5464;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Table of contents */
+        .toc {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            border: 1px solid #eef2f7;
+        }
+
+        .toc h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e2a32;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .toc h3 i {
+            color: #e8491d;
+        }
+
+        .toc-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .toc-link {
+            background: #f8fafc;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            color: #3a5464;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid #eef2f7;
+        }
+
+        .toc-link:hover {
+            background: #e8491d;
+            color: #fff;
+            border-color: #e8491d;
+        }
+
+        /* Terms sections */
+        .terms-section {
             background: #ffffff;
             border-radius: 28px;
-            overflow: hidden;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.35s ease;
-            border: 1px solid rgba(0, 0, 0, 0.03);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid #eef2f7;
+            transition: all 0.2s ease;
         }
 
-        .service:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 24px 40px -12px rgba(232, 73, 29, 0.12);
-            border-color: rgba(232, 73, 29, 0.15);
+        .terms-section:hover {
+            border-color: #e8491d20;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
         }
 
-        .service-photo {
-            width: 320px;
-            height: 260px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .service:hover .service-photo {
-            transform: scale(1.02);
-        }
-
-        .service-info {
-            flex: 1;
-            padding: 1.5rem 1.5rem 1.5rem 0;
-        }
-
-        .service-info h2 {
-            font-size: 1.8rem;
+        .terms-section h2 {
+            font-size: 1.6rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #1e2a32, #2c3e50);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 0.75rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .service-info h2:after {
-            content: '';
-            position: absolute;
-            bottom: -6px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: #e8491d;
-            border-radius: 3px;
-        }
-
-        .service-info p {
-            font-size: 0.95rem;
-            line-height: 1.65;
-            color: #3a5464;
-            margin-top: 0.8rem;
-        }
-
-        /* alternating layout for visual interest */
-        .service:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .service:nth-child(even) .service-info {
-            padding: 1.5rem 0 1.5rem 1.5rem;
-        }
-
-        /* Consultation section - premium callout */
-        .consultation-section {
-            background: linear-gradient(135deg, #1a2a2f 0%, #0f1e24 100%);
-            padding: 4rem 2rem;
-            margin: 2rem 0 0;
-            text-align: center;
-            position: relative;
-        }
-
-        .consultation-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #e8491d, #f39c12, #e8491d);
-        }
-
-        .consultation-section h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #ffffff;
+            color: #1e2a32;
             margin-bottom: 1rem;
-            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
         }
 
-        .consultation-section p {
-            font-size: 1rem;
-            max-width: 760px;
-            margin: 0 auto;
-            color: #ccdce5;
-            line-height: 1.7;
+        .terms-section h2 i {
+            color: #e8491d;
+            font-size: 1.4rem;
+        }
+
+        .terms-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .terms-section p {
+            color: #3a5464;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 0.8rem 0 0.8rem 1.8rem;
+            color: #3a5464;
+        }
+
+        .terms-section li {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .terms-section a {
+            color: #e8491d;
+            text-decoration: none;
+        }
+
+        .terms-section a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fef5e8, #fff8f0);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border: 1px solid #e8491d15;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box i {
+            color: #e8491d;
+            margin-right: 0.5rem;
         }
 
         /* ===== NEW PROFESSIONAL FOOTER ===== */
@@ -551,36 +598,17 @@
         }
 
         @media (max-width: 768px) {
-            .services-section {
-                padding: 0 1rem;
-                margin: 2rem auto;
+            .terms-container {
+                padding: 1.5rem;
             }
-            .service {
-                flex-direction: column !important;
-                background: white;
-                border-radius: 24px;
-                margin-bottom: 1rem;
+            .terms-section {
+                padding: 1.2rem;
             }
-            .service-photo {
-                width: 100%;
-                height: 220px;
+            .terms-section h2 {
+                font-size: 1.3rem;
             }
-            .service-info {
-                padding: 1rem 1.5rem 1.8rem !important;
-                text-align: center;
-            }
-            .service-info h2:after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            .service-info h2 {
-                font-size: 1.5rem;
-            }
-            .consultation-section h2 {
-                font-size: 1.7rem;
-            }
-            .consultation-section p {
-                font-size: 0.9rem;
+            .toc {
+                padding: 1rem;
             }
             .footer-grid {
                 gap: 2rem;
@@ -615,7 +643,7 @@
     <header id="showcase">
         <nav>
             <div class="logo">
-                <a href="https://thebmdmedia.com/"><img src="https://thebmdmedia.com/img/bmd-logo.webp" alt="BMD Media Logo"></a>
+                <a href="index.html"><img src="https://thebmdmedia.com/img/bmd-logo.webp" alt="BMD Media Logo"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -634,11 +662,11 @@
             </div>
         </nav>
         <div class="rt">
-            <h1><span>Our</span> Services</h1>
+            <h1><span>Terms of</span> Service</h1>
         </div>
     </header>
     <div class="overlay" id="overlay">
-        <div class="close-btn" id="close-btn">X</div>
+        <div class="close-btn" id="close-btn">✕</div>
         <ul>
             <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -651,69 +679,154 @@
         </ul>
     </div>
 
-    <!-- Modern services grid -->
-    <div class="services-section">
-        <div class="service">
-            <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-35.webp" alt="Event Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Event Photography</h2>
-                <p>Our event photography service covers corporate events, weddings, birthdays, and more. We specialize in capturing candid moments that tell the story of your event beautifully, with an unobtrusive approach that puts guests at ease. From grand celebrations to intimate gatherings, every frame reflects genuine emotion and elegance.</p>
+    <!-- Terms of Service Content -->
+    <div class="terms-container">
+        <!-- Last Updated Banner -->
+        <div class="last-updated">
+            <i class="fas fa-file-contract"></i>
+            <p><strong>Effective Date:</strong> May 23, 2026 | These Terms of Service govern your use of BMD Media's website and photography services.</p>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h3><i class="fas fa-list-ul"></i> On this page</h3>
+            <div class="toc-grid">
+                <a href="#acceptance" class="toc-link">Acceptance of Terms</a>
+                <a href="#services" class="toc-link">Photography Services</a>
+                <a href="#bookings" class="toc-link">Bookings & Payments</a>
+                <a href="#cancellations" class="toc-link">Cancellations & Refunds</a>
+                <a href="#intellectual" class="toc-link">Intellectual Property</a>
+                <a href="#limitations" class="toc-link">Limitations of Liability</a>
+                <a href="#governing" class="toc-link">Governing Law</a>
+                <a href="#contact" class="toc-link">Contact Us</a>
             </div>
         </div>
 
-        <div class="service">
-            <img src="https://thebmdmedia.com/img/bmd-img-45.webp" alt="Portrait Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Portrait Photography</h2>
-                <p>We create stunning portrait photography for individuals, families, and businesses. Whether in our studio or on location, we ensure you look your best with expert lighting and posing direction. Each portrait is crafted to reveal personality and confidence, perfect for personal branding or cherished family heirlooms.</p>
+        <!-- Section 1 - Acceptance -->
+        <div id="acceptance" class="terms-section">
+            <h2><i class="fas fa-check-circle"></i> Acceptance of Terms</h2>
+            <p>By accessing the BMD Media website (thebmdmedia.com) or engaging our photography and videography services, you agree to be bound by these Terms of Service. If you do not agree to any part of these terms, please do not use our website or services.</p>
+            <p>We reserve the right to modify these terms at any time. Changes become effective immediately upon posting. Your continued use of our services constitutes acceptance of the updated terms.</p>
+        </div>
+
+        <!-- Section 2 - Photography Services -->
+        <div id="services" class="terms-section">
+            <h2><i class="fas fa-camera"></i> Photography Services</h2>
+            <p>BMD Media provides professional photography and videography services including but not limited to weddings, portraits, events, fashion, commercial, and documentary photography.</p>
+            <h3>Service Description</h3>
+            <ul>
+                <li>All services are provided as described in your signed service agreement or booking confirmation.</li>
+                <li>We reserve the right to refuse service that violates our ethical standards or local laws.</li>
+                <li>Client is responsible for providing accurate event details, timelines, and access to locations.</li>
+                <li>We strive to deliver high-quality images but cannot guarantee specific shot outcomes due to uncontrollable factors (weather, lighting, venue restrictions, etc.).</li>
+            </ul>
+            <div class="highlight-box">
+                <p><i class="fas fa-clock"></i> <strong>Arrival & Coverage:</strong> Our team will arrive at the scheduled time. Delays caused by client or venue may affect coverage duration.</p>
+                <p><i class="fas fa-image"></i> <strong>Editing Timeline:</strong> Standard delivery of edited images is 2-6 weeks depending on package and season.</p>
             </div>
         </div>
 
-        <div class="service">
-            <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-40.webp" alt="Product Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Product Photography</h2>
-                <p>Showcase your products with our professional product photography. Perfect for e-commerce, catalogs, and advertisements, we focus on lighting and detail to highlight your product's best features. From minimalistic white-background shots to creative lifestyle compositions, we elevate your brand's visual identity.</p>
+        <!-- Section 3 - Bookings & Payments -->
+        <div id="bookings" class="terms-section">
+            <h2><i class="fas fa-credit-card"></i> Bookings & Payments</h2>
+            <h3>Deposit Requirements</h3>
+            <p>A non-refundable deposit of 30% to 50% (depending on package) is required to secure your booking date. Your date is not confirmed until the deposit is received.</p>
+            <h3>Final Payment</h3>
+            <p>The remaining balance is due no later than 14 days before the scheduled event date unless otherwise stated in your agreement. For studio sessions, full payment is due at time of booking.</p>
+            <h3>Payment Methods</h3>
+            <p>We accept bank transfers, credit/debit cards, and mobile payments as specified on your invoice. All fees are in Nigerian Naira (₦) unless otherwise noted.</p>
+            <div class="highlight-box">
+                <p><i class="fas fa-exclamation-triangle"></i> <strong>Important:</strong> Failure to complete payment by the due date may result in cancellation of your booking without refund of deposit.</p>
             </div>
         </div>
 
-        <div class="service">
-            <img src="https://thebmdmedia.com/img/bmd-img-46.webp" alt="Fashion Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Fashion Photography</h2>
-                <p>We offer high-end fashion photography services for brands, designers, and magazines. Our creative approach ensures your fashion story is told through captivating visuals — from editorial shoots to lookbooks and runway coverage. We blend contemporary aesthetics with timeless sophistication.</p>
+        <!-- Section 4 - Cancellations & Refunds -->
+        <div id="cancellations" class="terms-section">
+            <h2><i class="fas fa-calendar-times"></i> Cancellations & Refunds</h2>
+            <h3>Client Cancellations</h3>
+            <ul>
+                <li><strong>More than 60 days before event:</strong> Deposit is forfeited, no further charges.</li>
+                <li><strong>30-60 days before event:</strong> 50% of total package price is due.</li>
+                <li><strong>Less than 30 days before event:</strong> 100% of total package price is due.</li>
+            </ul>
+            <h3>Studio Session Cancellations</h3>
+            <ul>
+                <li>Cancellations within 48 hours of session: 50% fee applies.</li>
+                <li>No-shows or same-day cancellations: Full session fee applies.</li>
+            </ul>
+            <h3>BMD Media Cancellations</h3>
+            <p>In the unlikely event we must cancel due to illness or emergency, we will provide a full refund of all payments made or reschedule at no additional cost. We are not responsible for incidental expenses incurred.</p>
+            <h3>Weather Policy</h3>
+            <p>Outdoor sessions may be rescheduled due to severe weather at no penalty. We will work with you to find an alternative date.</p>
+        </div>
+
+        <!-- Section 5 - Intellectual Property -->
+        <div id="intellectual" class="terms-section">
+            <h2><i class="fas fa-copyright"></i> Intellectual Property & Image Rights</h2>
+            <h3>Copyright Ownership</h3>
+            <p>All photographs, videos, and creative content produced by BMD Media remain the intellectual property of BMD Media. We grant clients a perpetual, non-exclusive license to use the images for personal, non-commercial purposes.</p>
+            <h3>Commercial Use</h3>
+            <p>Commercial use (advertising, resale, product packaging, etc.) requires written permission and may incur additional licensing fees.</p>
+            <h3>Client Usage Rights</h3>
+            <ul>
+                <li>Clients may share images on social media with credit to BMD Media.</li>
+                <li>Clients may print images for personal use (albums, wall art, gifts).</li>
+                <li>Clients may not sell, alter, or claim ownership of the images.</li>
+            </ul>
+            <h3>Portfolio Use</h3>
+            <p>We reserve the right to use images from your session for our portfolio, website, social media, and marketing materials unless explicitly declined in writing before the shoot.</p>
+            <div class="highlight-box">
+                <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> Raw/unedited files are not released to clients. All delivered images are professionally edited to our quality standards.</p>
             </div>
         </div>
 
-        <div class="service">
-            <img src="https://thebmdmedia.com/img/bmd-img-37.webp" alt="Studio Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Studio Photography</h2>
-                <p>Our studio photography service offers professional, high-quality portraits for individuals, families, and businesses. We specialize in creating timeless, posed images that capture your personality, style, and essence, providing you with beautiful, lasting memories. Controlled lighting and premium backdrops guarantee exceptional results.</p>
-            </div>
+        <!-- Section 6 - Limitations of Liability -->
+        <div id="limitations" class="terms-section">
+            <h2><i class="fas fa-shield-alt"></i> Limitations of Liability</h2>
+            <p>To the fullest extent permitted by law, BMD Media shall not be liable for:</p>
+            <ul>
+                <li>Any indirect, incidental, or consequential damages arising from our services.</li>
+                <li>Loss of images due to equipment failure beyond our reasonable control — we take multiple backups but are not responsible for acts of nature.</li>
+                <li>Third-party claims or damages related to your use of our images.</li>
+                <li>Issues caused by venue restrictions, uncooperative subjects, or factors outside our control.</li>
+            </ul>
+            <p>Our total liability is limited to the total amount paid by you for our services. We strongly recommend clients obtain event insurance for weddings and large events.</p>
         </div>
 
-        <div class="service">
-            <img src="https://thebmdmedia.com/img/bmd-img-36.webp" alt="Cinematography" class="service-photo">
-            <div class="service-info">
-                <h2>Cinematography</h2>
-                <p>Our cinematography services bring your story to life through stunning visuals and expert camera work. We specialize in capturing high-quality, cinematic footage for films, commercials, weddings, and events, providing you with a beautiful, lasting record of your special moments. Every project is treated with narrative precision.</p>
-            </div>
+        <!-- Section 7 - Governing Law -->
+        <div id="governing" class="terms-section">
+            <h2><i class="fas fa-gavel"></i> Governing Law & Dispute Resolution</h2>
+            <p>These Terms of Service shall be governed by and construed in accordance with the laws of the Federal Republic of Nigeria.</p>
+            <h3>Dispute Resolution</h3>
+            <p>Any dispute arising from these terms or our services shall first be attempted to be resolved through good-faith negotiation. If unresolved, the dispute shall be submitted to binding arbitration in Enugu, Nigeria, in accordance with Nigerian arbitration laws.</p>
+            <p>You agree that any claim must be filed within one year of the incident giving rise to the claim, or it is permanently barred.</p>
         </div>
 
-        <div class="service">
-            <img src="https://thebmdmedia.com/img/special.webp" alt="Documentary Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Documentary</h2>
-                <p>Our documentary services tell real stories that inspire, educate, and captivate. With a keen eye for detail and a passion for storytelling, we craft compelling narratives that shed light on the human experience, spark meaningful conversations, and leave a lasting impact. Authentic and unfiltered, we capture truth as it unfolds.</p>
-            </div>
+        <!-- Section 8 - Website Use -->
+        <div class="terms-section">
+            <h2><i class="fas fa-globe"></i> Website Use</h2>
+            <p>Our website is provided "as is" for informational purposes. We do not guarantee uninterrupted or error-free access. You agree not to:</p>
+            <ul>
+                <li>Use our website for any unlawful purpose.</li>
+                <li>Attempt to gain unauthorized access to our systems.</li>
+                <li>Copy, reproduce, or distribute our content without permission.</li>
+                <li>Interfere with the proper functioning of the website.</li>
+            </ul>
         </div>
-    </div>
 
-    <!-- Consultation section redesigned -->
-    <div class="consultation-section">
-        <h2>Consultation & Planning</h2>
-        <p>We offer personalized consultations to ensure your photography session is tailored to your specific needs. From pre-event planning to post-production services, we guide you every step of the way to create images you'll love. Our team collaborates closely with you — discussing creative direction, timelines, and deliverables — so your vision becomes a stunning reality.</p>
+        <!-- Section 9 - Contact -->
+        <div id="contact" class="terms-section">
+            <h2><i class="fas fa-envelope"></i> Contact Information</h2>
+            <p>If you have any questions about these Terms of Service, please contact us:</p>
+            <div class="highlight-box" style="background: linear-gradient(135deg, #f8fafc, #ffffff);">
+                <p><i class="fas fa-building"></i> <strong>BMD Media</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> Shop 10, Nnamdi Azikiwe Stadium, Enugu, Nigeria</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:legal@thebmdmedia.com">legal@thebmdmedia.com</a></p>
+                <p><i class="fas fa-phone-alt"></i> +234 705 184 8117</p>
+                <p><i class="fas fa-clock"></i> Monday - Friday: 9am - 6pm, Saturday: 10am - 4pm</p>
+            </div>
+            <p style="margin-top: 1rem;">By engaging BMD Media, you acknowledge that you have read, understood, and agree to these Terms of Service.</p>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -778,7 +891,7 @@
     </footer>
 
     <script>
-        // Mobile overlay functionality - preserved original
+        // Mobile overlay functionality
         const hamburger = document.getElementById('hamburger-menu');
         const overlay = document.getElementById('overlay');
         const closeBtn = document.getElementById('close-btn');
@@ -794,12 +907,24 @@
             });
         }
         
-        // Newsletter subscription
-        const subBtn = document.getElementById('subscribeFooterBtn');
-        if (subBtn) {
-            subBtn.addEventListener('click', function(e) {
+        // Smooth scroll for TOC links
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
-                let emailInput = document.getElementById('newsletterEmailFooter');
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Newsletter subscription
+        const subscribeBtn = document.getElementById('subscribeBtn');
+        if (subscribeBtn) {
+            subscribeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                let emailInput = document.getElementById('newsletterEmail');
                 let email = emailInput.value.trim();
                 if (email && email.includes('@') && email.includes('.')) {
                     alert(`Thanks for subscribing! Updates will be sent to ${email}.`);
